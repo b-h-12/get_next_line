@@ -6,13 +6,13 @@
 /*   By: bhamoum <bhamoum@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:05:25 by bhamoum           #+#    #+#             */
-/*   Updated: 2025/04/22 21:10:35 by bhamoum          ###   ########.fr       */
+/*   Updated: 2025/04/22 22:38:38 by bhamoum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	
 }
