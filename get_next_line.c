@@ -6,7 +6,7 @@
 /*   By: bhamoum <bhamoum@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:05:25 by bhamoum           #+#    #+#             */
-/*   Updated: 2025/04/25 19:58:30 by bhamoum          ###   ########.fr       */
+/*   Updated: 2025/04/25 20:06:52 by bhamoum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*get_next_line(int fd)
     line_len = contains_new_line(leftover);
     if (line_len > 0)
         return (extract_line(&leftover, line_len));
-    byte_read = 1;
-    while (line_len < 1 && byte_read > 0)
+    byte_read = BUFFER_SIZE;
+    while (line_len < 1 && byte_read == BUFFER_SIZE)
     {
         if ((byte_read = read(fd, buffer, BUFFER_SIZE)) < 0)
         {
