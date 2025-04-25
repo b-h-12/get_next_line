@@ -6,7 +6,7 @@
 /*   By: bhamoum <bhamoum@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:06:11 by bhamoum           #+#    #+#             */
-/*   Updated: 2025/04/25 19:58:11 by bhamoum          ###   ########.fr       */
+/*   Updated: 2025/04/25 20:18:17 by bhamoum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strjoin(const char *s1, const char *s2, int len2)
+char	*ft_strjoin(char *s1, const char *s2, int len2)
 {
     char	*str;
-    size_t	i;
-    size_t	j;
+    int	i;
+    int	j;
     int	len1;
 
     len1 = ft_strlen(s1);
