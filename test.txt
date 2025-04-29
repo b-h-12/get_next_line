@@ -1,8 +1,11 @@
-bonjour
-un
-deux
-trois
-b
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "get_next_line.h" // Include your header file
 
-.
-5
+int main(void)
+{
+	int fd;
+	char *line;
+
+	// Open the test file

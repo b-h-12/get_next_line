@@ -6,7 +6,7 @@
 /*   By: bhamoum <bhamoum@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:06:11 by bhamoum           #+#    #+#             */
-/*   Updated: 2025/04/29 17:59:21 by bhamoum          ###   ########.fr       */
+/*   Updated: 2025/04/29 22:21:02 by bhamoum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,24 +82,23 @@ void	ft_cut_left(char **str)
 	char	*right;
 	int		i;
 
-	i = 1;
+	i = 0;
 	right = ft_strchr(*str, '\n');
-	//printf("%s", right);
 	tmp = malloc(sizeof(char) * (ft_strlen(right) + 1));
-	//printf("%d", ft_strlen(right));
 	if (!tmp)
 		return ;
-	while (right[i])
+	while (right[i+1])
 	{
-		tmp[i] = right[i];
-		//printf("%c", tmp[i]);
+		tmp[i] = right[i+1];
 		i++;
 	}
-	//printf("%s", tmp);
 	tmp[i] = '\0';
-	//char *tmp2 = tmp;
-	//printf("tmp = %s\n", tmp2);
-	printf("%s", tmp);
 	free(*str);
-	*str = tmp;
+	if (i == 0)
+	{
+		free(tmp);
+		*str = NULL;
+	}
+	else
+		*str = tmp;
 }
