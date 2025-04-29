@@ -6,7 +6,7 @@
 /*   By: bhamoum <bhamoum@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:06:11 by bhamoum           #+#    #+#             */
-/*   Updated: 2025/04/28 17:21:59 by bhamoum          ###   ########.fr       */
+/*   Updated: 2025/04/29 13:51:58 by bhamoum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int	ft_strlen(char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	if (!str)
 		return (0);
-	while(str[i])
+	while (str[i])
 		i++;
 	return (i);
 }
@@ -27,13 +27,13 @@ int	ft_strlen(char *str)
 void	ft_append(char **s1, char const *s2)
 {
 	char	*str;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
 	if (!s1)
-        return ;
+		return ;
 	str = (char *)malloc(ft_strlen(*s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return ;
@@ -75,14 +75,14 @@ void	ft_cut_left(char **str)
 {
 	char	*tmp;
 	char	*right;
-	int	i;
+	int		i;
 
 	i = 1;
 	right = ft_strchr(*str, '\n');
 	tmp = malloc(sizeof(char) * (ft_strlen(right)));
 	if (!tmp)
 		return ;
-	while(right[i])
+	while (right[i])
 	{
 		tmp[i] = right[i];
 		i++;
