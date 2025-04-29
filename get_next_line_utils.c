@@ -6,7 +6,7 @@
 /*   By: bhamoum <bhamoum@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:06:11 by bhamoum           #+#    #+#             */
-/*   Updated: 2025/04/29 13:51:58 by bhamoum          ###   ########.fr       */
+/*   Updated: 2025/04/29 13:52:40 by bhamoum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-void	ft_append(char **s1, char const *s2)
+void	ft_append(char **s1, char *s2)
 {
 	char	*str;
 	int		i;

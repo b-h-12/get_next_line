@@ -6,7 +6,7 @@
 /*   By: bhamoum <bhamoum@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:05:47 by bhamoum           #+#    #+#             */
-/*   Updated: 2025/04/28 17:22:43 by bhamoum          ###   ########.fr       */
+/*   Updated: 2025/04/29 13:52:48 by bhamoum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <unistd.h>
 
 int	ft_strlen(char *str);
-void	ft_append(char **s1, char const *s2);
+void	ft_append(char **s1, char *s2);
 void	ft_cut_left(char **str);
 char    *get_next_line(int fd);
 char	*ft_strchr(const char *s, char c);
